@@ -65,7 +65,7 @@ helpers do
 
   def comments_link(post)
     comment_string = "#{post.comments.length} comment"
-    comment_string << 's' if post.comments.length != 1
+    comment_string << 's' if post.comments.length > 1
     params = {
       :href => "/post/#{post.slug}#comments",
       :title => 'View comments for this post'
